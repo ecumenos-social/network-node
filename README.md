@@ -1,1 +1,1 @@
-# orbis-socialis
+# Orbis Socialis
