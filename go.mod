@@ -1,3 +1,3 @@
-module github.com/ecumenos-social/orbis-socialis
+module github.com/ecumenos-social/network-node
 
 go 1.21.5

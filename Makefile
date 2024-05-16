@@ -38,7 +38,3 @@ check: ## Compile everything, checking syntax (does not output binaries)
 .env:
 	if [ ! -f ".env" ]; then cp example.dev.env .env; fi
 
-
-.PHONY: submodules
-submodules:
-	git submodule foreach git pull origin main
