@@ -53,3 +53,7 @@ run-ingress-service: .env
 .PHONY: run-api-gateway
 run-api-gateway: .env
 	go run cmd/api-gateway/*.go run
+
+.PHONY: run-admin
+run-admin: .env
+	go run cmd/admin/*.go run
