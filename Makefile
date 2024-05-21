@@ -41,3 +41,7 @@ check: ## Compile everything, checking syntax (does not output binaries)
 .PHONY: run-crawler
 run-crawler: .env
 	go run cmd/crawler/*.go run
+
+.PHONY: run-blockchain-peer
+run-blockchain-peer: .env
+	go run cmd/blockchain-peer/*.go run
