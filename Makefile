@@ -45,3 +45,7 @@ run-crawler: .env
 .PHONY: run-blockchain-peer
 run-blockchain-peer: .env
 	go run cmd/blockchain-peer/*.go run
+
+.PHONY: run-ingress-service
+run-ingress-service: .env
+	go run cmd/ingress-service/*.go run
