@@ -49,3 +49,7 @@ run-blockchain-peer: .env
 .PHONY: run-ingress-service
 run-ingress-service: .env
 	go run cmd/ingress-service/*.go run
+
+.PHONY: run-api-gateway
+run-api-gateway: .env
+	go run cmd/api-gateway/*.go run
