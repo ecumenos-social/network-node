@@ -4,10 +4,11 @@ go 1.21.5
 
 require (
 	github.com/ecumenos-social/grpc-utils v0.0.1
-	github.com/ecumenos-social/schemas v0.0.4
-	github.com/ecumenos-social/toolkitfx v0.0.2
+	github.com/ecumenos-social/schemas v0.0.5
+	github.com/ecumenos-social/toolkitfx v0.0.4
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.20.0
 	github.com/heptiolabs/healthcheck v0.0.0-20211123025425-613501dd5deb
+	github.com/joho/godotenv v1.5.1
 	github.com/urfave/cli/v2 v2.27.2
 	go.uber.org/fx v1.21.1
 	go.uber.org/zap v1.27.0
@@ -22,7 +23,6 @@ require (
 	github.com/grpc-ecosystem/go-grpc-middleware/v2 v2.1.0 // indirect
 	github.com/hashicorp/errwrap v1.0.0 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
-	github.com/kelseyhightower/envconfig v1.4.0 // indirect
 	github.com/prometheus/client_golang v1.19.1 // indirect
 	github.com/prometheus/client_model v0.5.0 // indirect
 	github.com/prometheus/common v0.48.0 // indirect

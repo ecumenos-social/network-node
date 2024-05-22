@@ -15,10 +15,10 @@ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/ecumenos-social/grpc-utils v0.0.1 h1:tH7X8sW7+tfjM2bOUjIYmzFnuX2eNA0/d4RctGw8RO4=
 github.com/ecumenos-social/grpc-utils v0.0.1/go.mod h1:os4xHtcifDCUwxQT5wbWGi2tCwjDAT79zFQHZZ3dz6M=
-github.com/ecumenos-social/schemas v0.0.4 h1:urSHXqfwAg+T8gZN17gfARYsudLpUZjuFr7FLJH98+g=
-github.com/ecumenos-social/schemas v0.0.4/go.mod h1:TAmybCAsf9PTP+utnU0AZzcO/DxAoIMyh/bv2wHVcZk=
-github.com/ecumenos-social/toolkitfx v0.0.2 h1:K388I+JbNsLRWp7l/sK4hlG7wbl5KWG+oJTswIU22cc=
-github.com/ecumenos-social/toolkitfx v0.0.2/go.mod h1:IuidCvSFFoB2cdvsY6asBjMU/X55y8qRD8Sp6rP4xQ8=
+github.com/ecumenos-social/schemas v0.0.5 h1:rbpXJuYXLiWf4T34n2eykaw86eJ4cOzOCmQOYAktprE=
+github.com/ecumenos-social/schemas v0.0.5/go.mod h1:TAmybCAsf9PTP+utnU0AZzcO/DxAoIMyh/bv2wHVcZk=
+github.com/ecumenos-social/toolkitfx v0.0.4 h1:x5lxK8aWASJ3h/ng5633eFGDlf3N0sW9SuLld1qfBoc=
+github.com/ecumenos-social/toolkitfx v0.0.4/go.mod h1:qmxdTPf65NPk/3tR4EYjl/kU/RbsBnHZzOT2RtI7OcU=
 github.com/envoyproxy/go-control-plane v0.9.0/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
 github.com/envoyproxy/go-control-plane v0.9.1-0.20191026205805-5f8ba28d4473/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
 github.com/envoyproxy/go-control-plane v0.9.4/go.mod h1:6rpuAdCZL397s3pYoYcLgu1mIlRU8Am5FuJP05cCM98=
@@ -50,8 +50,8 @@ github.com/hashicorp/go-multierror v1.1.1 h1:H5DkEtf6CXdFp0N0Em5UCwQpXMWke8IA0+l
 github.com/hashicorp/go-multierror v1.1.1/go.mod h1:iw975J/qwKPdAO1clOe2L8331t/9/fmwbPZ6JB6eMoM=
 github.com/heptiolabs/healthcheck v0.0.0-20211123025425-613501dd5deb h1:tsEKRC3PU9rMw18w/uAptoijhgG4EvlA5kfJPtwrMDk=
 github.com/heptiolabs/healthcheck v0.0.0-20211123025425-613501dd5deb/go.mod h1:NtmN9h8vrTveVQRLHcX2HQ5wIPBDCsZ351TGbZWgg38=
-github.com/kelseyhightower/envconfig v1.4.0 h1:Im6hONhd3pLkfDFsbRgu68RDNkGF1r3dvMUtDTo2cv8=
-github.com/kelseyhightower/envconfig v1.4.0/go.mod h1:cccZRl6mQpaq41TPp5QxidR+Sa3axMbJDNb//FQX6Gg=
+github.com/joho/godotenv v1.5.1 h1:7eLL/+HRGLY0ldzfGMeQkb7vMd0as4CfYvUVzLqw0N0=
+github.com/joho/godotenv v1.5.1/go.mod h1:f4LDr5Voq0i2e/R5DDNOoa2zzDfwtkZa6DnEwAbqwq4=
 github.com/kisielk/errcheck v1.5.0/go.mod h1:pFxgyoBC7bSaBwPgfKdkLd5X25qrDl4LWUI2bnpBCr8=
 github.com/kisielk/gotool v1.0.0/go.mod h1:XhKaO+MFFWcvkIS/tQcRk01m1F5IRFswLeQ+oQHNcck=
 github.com/konsorten/go-windows-terminal-sequences v1.0.1/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=

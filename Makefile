@@ -38,22 +38,22 @@ check: ## Compile everything, checking syntax (does not output binaries)
 .env:
 	if [ ! -f ".env" ]; then cp example.dev.env .env; fi
 
-.PHONY: run-crawler
-run-crawler: .env
-	go run cmd/crawler/*.go run
-
-.PHONY: run-blockchain-peer
-run-blockchain-peer: .env
-	go run cmd/blockchain-peer/*.go run
-
-.PHONY: run-ingress-service
-run-ingress-service: .env
-	go run cmd/ingress-service/*.go run
+.PHONY: run-admin
+run-admin: .env
+	go run cmd/admin/*.go run
 
 .PHONY: run-api-gateway
 run-api-gateway: .env
 	go run cmd/api-gateway/*.go run
 
-.PHONY: run-admin
-run-admin: .env
-	go run cmd/admin/*.go run
+.PHONY: run-blockchain-peer
+run-blockchain-peer: .env
+	go run cmd/blockchain-peer/*.go run
+
+.PHONY: run-crawler
+run-crawler: .env
+	go run cmd/crawler/*.go run
+
+.PHONY: run-ingress-service
+run-ingress-service: .env
+	go run cmd/ingress-service/*.go run
