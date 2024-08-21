@@ -3,7 +3,7 @@ package configurations
 import "time"
 
 var (
-	ServiceName    = "network-node-ingress-service"
+	ServiceName    = "core"
 	ServiceVersion = "v0.0.0"
 	StartTimeout   = 5 * time.Minute
 )

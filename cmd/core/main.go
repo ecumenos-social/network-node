@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ecumenos-social/network-node/cmd/api-gateway/configurations"
+	"github.com/ecumenos-social/network-node/cmd/core/configurations"
 	"github.com/joho/godotenv"
 	cli "github.com/urfave/cli/v2"
 )
