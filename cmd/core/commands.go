@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/ecumenos-social/network-node/cmd/api-gateway/configurations"
+	"github.com/ecumenos-social/network-node/cmd/core/configurations"
 	cli "github.com/urfave/cli/v2"
 	"go.uber.org/fx"
 )

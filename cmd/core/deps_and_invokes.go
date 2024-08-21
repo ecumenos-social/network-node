@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/ecumenos-social/network-node/cmd/ingress-service/configurations"
-	"github.com/ecumenos-social/network-node/cmd/ingress-service/grpc"
+	"github.com/ecumenos-social/network-node/cmd/core/configurations"
+	"github.com/ecumenos-social/network-node/cmd/core/grpc"
 	"github.com/ecumenos-social/toolkitfx"
 	"github.com/ecumenos-social/toolkitfx/fxgrpc"
 	"github.com/ecumenos-social/toolkitfx/fxlogger"
@@ -13,17 +13,16 @@ var Dependencies = fx.Options(
 	fx.Supply(toolkitfx.ServiceName(configurations.ServiceName)),
 	fxlogger.Module,
 	fx.Provide(
+		grpc.NewHandler,
 		grpc.NewGRPCServer,
-		// TODO: uncomment when endpoints are added
-		// grpc.NewGatewayHandler,
-		// grpc.NewLivenessGateway,
+		grpc.NewGatewayHandler,
+		grpc.NewLivenessGateway,
 	),
 )
 
 var Invokes = fx.Invoke(
 	fxgrpc.RunRegisteredGRPCServer,
-	// TODO: uncomment when endpoints are added
-	// grpc.RunHTTPGateway,
-	// fxgrpc.RunHealthServer,
-	// fxgrpc.RunLivenessGateway,
+	grpc.RunHTTPGateway,
+	fxgrpc.RunHealthServer,
+	fxgrpc.RunLivenessGateway,
 )

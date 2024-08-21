@@ -42,9 +42,9 @@ check: ## Compile everything, checking syntax (does not output binaries)
 run-admin: .env
 	go run cmd/admin/*.go run
 
-.PHONY: run-api-gateway
-run-api-gateway: .env
-	go run cmd/api-gateway/*.go run
+.PHONY: run-core
+run-core: .env
+	go run cmd/core/*.go run
 
 .PHONY: run-blockchain-peer
 run-blockchain-peer: .env
@@ -53,7 +53,3 @@ run-blockchain-peer: .env
 .PHONY: run-crawler
 run-crawler: .env
 	go run cmd/crawler/*.go run
-
-.PHONY: run-ingress-service
-run-ingress-service: .env
-	go run cmd/ingress-service/*.go run
