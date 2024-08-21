@@ -18,22 +18,30 @@ import (
 	"google.golang.org/grpc/keepalive"
 )
 
-func NewGRPCServer(lc fx.Lifecycle, config *fxgrpc.Config, sn toolkitfx.ServiceName) *fxgrpc.GRPCServer {
-	handler := NewHandler()
+type grpcServerParams struct {
+	fx.In
+
+	LC          fx.Lifecycle
+	Config      *fxgrpc.Config
+	ServiceName toolkitfx.ServiceName
+	Handler     *Handler
+}
+
+func NewGRPCServer(params grpcServerParams) *fxgrpc.GRPCServer {
 	grpcServer := fxgrpc.GRPCServer{}
-	lc.Append(fx.Hook{
+	params.LC.Append(fx.Hook{
 		OnStart: func(ctx context.Context) error {
-			server := grpcutils.NewServer(string(sn), net.JoinHostPort(config.GRPC.Host, config.GRPC.Port))
+			server := grpcutils.NewServer(string(params.ServiceName), net.JoinHostPort(params.Config.GRPC.Host, params.Config.GRPC.Port))
 			server.Init(
 				grpc.KeepaliveEnforcementPolicy(keepalive.EnforcementPolicy{
-					MinTime:             config.GRPC.KeepAliveEnforcementMinTime,
-					PermitWithoutStream: config.GRPC.KeepAliveEnforcementPermitWithoutStream,
+					MinTime:             params.Config.GRPC.KeepAliveEnforcementMinTime,
+					PermitWithoutStream: params.Config.GRPC.KeepAliveEnforcementPermitWithoutStream,
 				}),
 				grpcutils.ValidatorServerOption(),
 				grpcutils.RecoveryServerOption(),
-				grpc.KeepaliveParams(keepalive.ServerParameters{MaxConnectionAge: config.GRPC.MaxConnectionAge}),
+				grpc.KeepaliveParams(keepalive.ServerParameters{MaxConnectionAge: params.Config.GRPC.MaxConnectionAge}),
 			)
-			pbv1.RegisterApiGatewayServiceServer(server.Server, handler)
+			pbv1.RegisterApiGatewayServiceServer(server.Server, params.Handler)
 			grpcServer.Server = server
 
 			return nil
@@ -46,10 +54,9 @@ func NewGRPCServer(lc fx.Lifecycle, config *fxgrpc.Config, sn toolkitfx.ServiceN
 	return &grpcServer
 }
 
-func NewHTTPGatewayHandler() *fxgrpc.HTTPGatewayHandler {
+func NewGatewayHandler() *fxgrpc.HTTPGatewayHandler {
 	return &fxgrpc.HTTPGatewayHandler{
-		// TODO: uncomment when endpoints are added
-		// Handler: pbv1.RegisterApiGatewayServiceHandler,
+		Handler: pbv1.RegisterApiGatewayServiceHandler,
 	}
 }
 

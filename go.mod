@@ -3,8 +3,8 @@ module github.com/ecumenos-social/network-node
 go 1.21.5
 
 require (
-	github.com/ecumenos-social/grpc-utils v0.0.1
-	github.com/ecumenos-social/schemas v0.0.5
+	github.com/ecumenos-social/grpc-utils v0.0.2
+	github.com/ecumenos-social/schemas v0.0.23
 	github.com/ecumenos-social/toolkitfx v0.0.4
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.20.0
 	github.com/heptiolabs/healthcheck v0.0.0-20211123025425-613501dd5deb
